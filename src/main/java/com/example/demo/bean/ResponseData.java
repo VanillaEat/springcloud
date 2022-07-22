@@ -11,10 +11,10 @@ import org.springframework.context.annotation.Bean;
  */
 
 public class ResponseData {
-    private int code;
+    private int code=200;
     private String message;
     private String data;
-    private boolean status;
+    private boolean status=true;
 
     public String getData() {
         return data;

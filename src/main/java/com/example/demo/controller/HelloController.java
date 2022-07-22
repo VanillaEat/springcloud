@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,8 +18,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("hello")
     public String hello() {
+        this.saveLog();
 //        System.out.println("第一个REST接口生效");
 
         return "hello";
+    }
+
+    //在Controller中调用这个业务方法就是异步执行的.第二步要在启动类上开启异步任务的执行
+    @Async
+    public void saveLog(){
+        System.err.println(Thread.currentThread().getName());
     }
 }
