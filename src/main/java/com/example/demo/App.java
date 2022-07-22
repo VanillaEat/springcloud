@@ -9,6 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
  * springboot启动类
  * 发现没有：一个web项目依靠springboot框架一分钟搭好。内嵌web容器tomcat，可替换。
  *
+ * 还未完成随机生成端口  供springcloud使用
  *
  * @author: scott
  * @date: 2022年07月21日 13:44
